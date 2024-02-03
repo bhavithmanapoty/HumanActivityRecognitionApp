@@ -21,7 +21,7 @@ Android application for detecting and recording human activities using accelerom
 To run this project, you'll need to have Android Studio installed on your computer. Once you have that, you can clone this repository and open the project in Android Studio.
 
 ```bash
-git clone https://github.com/yourusername/your-repo-name.git
+git clone https://github.com/bhavithmanapoty/HumanActivityRecognitionApp.git
 ```
 
 ## Features
