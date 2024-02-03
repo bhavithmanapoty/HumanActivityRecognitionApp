@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".live.LiveDataActivity">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="112dp"
+        android:fontFamily="@font/comfortaa"
+        android:text="Live Classification"
+        android:textColor="#FFFF"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/respeck_graphs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/respeck_graphs"
+        android:layout_width="356dp"
+        android:layout_height="243dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.47">
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/respeck_chart"
+            android:layout_width="match_parent"
+            android:layout_height="251dp"
+            android:background="@color/white" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/predictionLabel"
+        android:layout_width="352dp"
+        android:layout_height="46dp"
+        android:background="@color/white"
+        android:fontFamily="@font/comfortaa"
+        android:paddingTop="3dp"
+        android:text="detecting motion"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/animation_selector"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/respeck_graphs"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/animation_selector"
+        android:layout_width="120dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="11dp"
+        app:layout_constraintBottom_toTopOf="@+id/cancel_recording_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/respeck_graphs"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ToggleButton
+        android:id="@+id/toggle_recording_button"
+        android:layout_width="64dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:background="@drawable/selector_record_button"
+        android:scaleType="fitCenter"
+        android:textOff=""
+        android:textOn=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.123"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/respeck_graphs"
+        app:layout_constraintVertical_bias="0.848" />
+
+    <Button
+        android:id="@+id/cancel_recording_button"
+        style="@style/HistoryButtonStyle"
+        android:layout_width="210dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_weight="1"
+        android:text="Cancel recording"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.203"
+        app:layout_constraintStart_toEndOf="@+id/toggle_recording_button"
+        app:layout_constraintTop_toBottomOf="@+id/respeck_graphs"
+        app:layout_constraintVertical_bias="0.861" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="416dp"
+        android:layout_height="54dp"
+        app:layout_constraintBottom_toTopOf="@+id/respeck_graphs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabGeneral"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TASK 1"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="157dp" />
+
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabStationary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TASK 2"
+            tools:layout_editor_absoluteX="206dp"
+            tools:layout_editor_absoluteY="155dp" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabOther"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TASK 3"
+            tools:layout_editor_absoluteX="206dp"
+            tools:layout_editor_absoluteY="155dp" />
+    </com.google.android.material.tabs.TabLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

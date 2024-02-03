@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".bluetooth.ConnectingActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/comfortaa"
+                    android:text="Connecting Device"
+                    android:textColor="@color/white"
+                    android:textSize="30dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/comfortaa"
+                    android:text="Does your phone support NFC? If so, tap it against the white surface of the Respeck to obtain the ID.\n\nOtherwise, find the ID on the Respeck label, or scan the Respeck QR code by pressing the Scan QR button."
+                    android:textColor="@color/white"
+                    android:textSize="24dp" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/comfortaa"
+                    android:text="Respeck ID"
+
+                    android:textColor="@color/white"
+                    android:textSize="18dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/respeck_code"
+                        android:layout_width="180dp"
+                        android:layout_height="50dp"
+                        android:background="@color/white"
+                        android:ems="10"
+                        android:fontFamily="@font/comfortaa"
+                        android:hint="Enter Respeck ID"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp" />
+
+                    <Button
+                        android:id="@+id/scan_respeck"
+                        style="@style/LiveButtonStyle"
+                        android:layout_width="180dp"
+                        android:layout_height="90dp"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="@font/comfortaa"
+                        android:text="Scan QR" />
+                </LinearLayout>
+
+
+                <!--                <LinearLayout-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:orientation="horizontal"-->
+                <!--                    android:gravity="center">-->
+
+
+                <!--                    <Button-->
+                <!--                        android:id="@+id/connect_button"-->
+                <!--                        android:layout_width="0dp"-->
+                <!--                        android:layout_weight="1"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:text="Connect"/>-->
+
+                <!--                    <Button-->
+                <!--                        android:id="@+id/disconnect_button"-->
+                <!--                        android:layout_width="0dp"-->
+                <!--                        android:layout_weight="1"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:text = "Disconnect"/>-->
+
+                <!--                </LinearLayout>-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <Button
+                    android:id="@+id/connect_sensors_button"
+                    style="@style/ConnectionButton"
+                    android:layout_width="168dp"
+                    android:layout_height="72dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/comfortaa"
+                    android:text="Pair Sensor" />
+
+                <Button
+                    android:id="@+id/restart_service_button"
+                    style="@style/ConnectionButton"
+                    android:layout_width="168dp"
+                    android:layout_height="72dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/comfortaa"
+                    android:text="Restart connection" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

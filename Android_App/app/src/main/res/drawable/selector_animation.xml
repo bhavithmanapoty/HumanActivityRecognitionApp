@@ -1,0 +1,39 @@
+<!-- res/drawable/image_selector.xml -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Sitting/standing -->
+    <item android:drawable="@drawable/sitting_standing_png" android:state_checked="true"/>
+
+    <!-- Lying-Left -->
+    <item android:drawable="@drawable/lying_left_png" android:state_checked="true"/>
+
+    <!-- Lying-Right -->
+    <item android:drawable="@drawable/lying_right_png" android:state_checked="true"/>
+
+    <!-- Lying-Back -->
+    <item android:drawable="@drawable/lying_back_gif" android:state_checked="true"/>
+
+    <!-- Lying-Stomach -->
+    <item android:drawable="@drawable/lying_stomach_png" android:state_checked="true"/>
+
+    <!-- Normal-Walking -->
+    <item android:drawable="@drawable/normal_walking_gif" android:state_checked="true"/>
+
+    <!-- Running -->
+    <item android:drawable="@drawable/running_gif" android:state_checked="true"/>
+
+    <!-- Descending-Stairs -->
+    <item android:drawable="@drawable/descending_stairs_gif" android:state_checked="true"/>
+
+    <!-- Ascending-Stairs -->
+    <item android:drawable="@drawable/ascending_stairs_gif" android:state_checked="true"/>
+
+    <!-- Shuffle-Walking -->
+    <item android:drawable="@drawable/shuffle_walking_gif" android:state_checked="true"/>
+
+    <!-- Mics-Movement -->
+    <item android:drawable="@drawable/mics_movement_gif" android:state_checked="true"/>
+
+
+</selector>

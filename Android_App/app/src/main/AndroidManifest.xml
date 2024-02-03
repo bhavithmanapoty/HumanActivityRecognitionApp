@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- To make app available to BLE-capable devices only -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.NFC" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+    <uses-feature android:name="android.hardware.camera" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- BluetoothSpeckService -->
+        <service
+            android:name=".bluetooth.BluetoothSpeckService"
+            android:enabled="true"
+            android:exported="true"></service>
+
+        <!-- LiveDataActivity -->
+        <activity
+            android:name=".live.LiveDataActivity"
+            android:screenOrientation="portrait">
+            <!-- ... (intent filters) ... -->
+        </activity>
+
+        <!-- BarcodeActivity -->
+        <activity
+            android:name=".barcode.BarcodeActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- ConnectingActivity -->
+        <activity
+            android:name=".bluetooth.ConnectingActivity"
+            android:screenOrientation="portrait">
+            <!-- ... (intent filters) ... -->
+        </activity>
+
+        <!-- BluetoothService -->
+        <service
+            android:name=".bluetooth.BluetoothService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.specknet.respeckmodeltesting.RESPECK_BROADCAST" />
+            </intent-filter>
+        </service>
+
+        <!-- OnBoardingActivity -->
+        <activity
+            android:name=".onboarding.OnBoardingActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- RecordingActivity -->
+        <activity
+            android:name=".RecordingActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- HistoryDisplayActivity -->
+        <activity
+            android:name=".HistoryDisplayActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- UserLogin -->
+        <activity
+            android:name=".UserLogin"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".UserRegistration"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+
+    </application>
+
+
+
+</manifest>
